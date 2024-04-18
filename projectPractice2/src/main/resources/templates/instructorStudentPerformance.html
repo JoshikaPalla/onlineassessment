@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>student quizList</title>
+<style>
+
+	body{
+ background-color:rgb(206, 213, 233);
+ }
+  *{
+   font-family: 'Times New Roman', Times, serif;
+   font-size:large;
+   }
+
+h2{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+  
+}
+  
+.tableDiv{
+  display: flex;
+  justify-content: center;
+}
+
+th, td {
+ 
+  padding: 8px;
+ 
+  
+}
+
+a{
+ padding:4px;
+ margin:6px;
+ display: inline;
+}
+    
+</style>
+
+</head>
+<body>
+	<div >
+        <header>
+             <nav class="navbar navbar-light " style="background-color:white;font-family: 'Times New Roman', Times, serif;font-size:large;font-weight:bold; color: white; padding:0px; margin:0px">
+              
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">OnlineAssessment</a>
+                  </div>
+                 <ul class="nav navbar-nav">
+                    <li><a th:href="@{/subjectHomePage}">Subjects</a></li>
+                    <li><a th:href="@{/viewStudentsPerformance}">Student Performance</a></li>
+                     <li><a th:href="@{/instructorQuizList}">QuizList</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li ><a th:href="@{/profile}"><span class="glyphicon glyphicon-user"></span> Profile </a></li>
+                    <li><a th:href="@{/loginOut}"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+                     <li ><a th:text="'Name:' + ${session.userName}"><span class="glyphicon glyphicon-log-in"></span> </a></li>
+                    
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <div class="container" >
+        	
+        	
+        	 <h2>Performance List</h2>
+           <br>
+            <div class="tableDiv" style="overflow-x:auto;">
+                <table>
+                <thead>
+                  <tr>
+                    <th>Quiz Name</th>
+                    <th> Percentage </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr th:each="performance : ${performanceMap}">
+                    <td th:text="${performance.getKey().quizName}"></td>
+                    <td th:text="${performance.getValue()}">
+                      </td>
+                      <td><a th:href="@{/viewPaper/{id}(id=${performance.getKey().quizId})}" class="btn btn-primary">View Paper</a>
+                      </td>
+                  </tr>
+                </tbody>
+                  </table>
+                </div>   
+		</div>
+	
+	</div>
+</body>
+</html>

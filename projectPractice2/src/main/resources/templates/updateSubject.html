@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>UpdateSubject</title>
+<style>
+  label{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-size: large;
+  }
+  form{
+        height:250px;
+        width: 250px;
+        
+    }
+    .addSubjectDiv{
+        width:300px;
+        height:250px;
+        background-color:aliceblue ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    
+    .container{
+       background-color:rgb(206, 213, 233);
+        height:530px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+        height:30px;
+        background-color: black;
+    }
+	
+	 *{
+   font-family: 'Times New Roman', Times, serif;
+   font-size:large;
+   }
+    
+</style>
+
+</head>
+<body>
+	<div>
+        <header>
+           <nav class="navbar navbar-light " style="background-color:white;font-family: 'Times New Roman', Times, serif;font-size:large;font-weight:bold; color: white; padding:0px; margin:0px">
+              
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">OnlineAssessment</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li><a th:href="@{/subjectHomePage}">Subjects</a></li>
+                    <li class="active"><a th:href="@{/addSubject}">Add Subject</a></li>
+                    
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li ><a th:href="@{/profile}"><span class="glyphicon glyphicon-user"></span> Profile </a></li>
+                    <li><a th:href="@{/loginOut}"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+                     <li ><a th:text="'Name:' + ${session.userName}"></a></li>
+                    
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <div class="container" >
+        	<div class="addSubjectDiv">
+		        <form action="/updateSubject/{id}(id=${subject.subjectId})" th:action="@{/updateSubjectToList}" th:object="${subject}"
+					method="POST">
+						<br>
+						<div th:if="${error}" th:text="${error}" style="color: red;"></div> 
+						<br>
+						
+						<input type="hidden" th:field="*{subjectId}" />
+						
+						<input type="hidden" th:field="*{instructorId}" />
+						
+						<label for="subjectName" >Subject Name:</label>
+            <br>
+						<input type="text" th:field="*{subjectName}" required
+						placeholder="Enter subject name" class="form-control mb-4 col-4">
+						<br>
+            <br>
+						<center>
+							<button type="submit" class="btn btn-info col-2"> Update Subject </button>
+						</center>
+						
+				</form>
+			</div>
+        	
+        	 
+		</div>
+    <footer></footer>
+	</div>
+</body>
+</html>

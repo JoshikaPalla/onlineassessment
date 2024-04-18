@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>homepage</title>
+    <style>
+    *{
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+
+
+.container{
+	width:100%;
+	margin:0px;
+	padding:0px;
+	background-image:url("index4.jpeg");
+	background-size: cover; /* Cover the entire background */
+    background-position: center;
+    background-repeat: no-repeat; 
+	text-align: center;
+	height:560px;
+	font-size:50px;
+	font-family: 'Times New Roman', Times, serif;
+}
+ *{
+   font-family: 'Times New Roman', Times, serif;
+   font-size:large;
+   }
+
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <nav class="navbar navbar-light " style="background-color:white;font-family: 'Times New Roman', Times, serif;font-size:large;font-weight:bold; color: white; padding:0px; margin:0px">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" style="font-size:large; " href="#">OnlineAssessment</a>
+                  </div>
+                  <ul class="nav navbar-nav" >
+                    <li class="active" ><a  th:href="@{index}">Home</a></li>
+                   
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right" >
+                    <li><a th:href="@{/register}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a   th:href="@{/login}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <div class="container"> </div>
+      
+    </div>
+</body>
+</html>

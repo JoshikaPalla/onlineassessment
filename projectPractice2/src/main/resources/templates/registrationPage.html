@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Registration Page</title>
+<style>
+
+    form{
+        height:400px;
+        width:350px;
+    }
+    .registrationDiv{
+        width:400px;
+        height:420px;
+        background-color:rgb(239, 239, 241);;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .container{
+        background-color:rgb(206, 213, 233);
+        height:550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+     *{
+   font-family: 'Times New Roman', Times, serif;
+   font-size:large;
+   }
+</style>
+
+</head>
+<body>
+	 <div >
+        <header>
+            <nav class="navbar navbar-light " style="background-color:white;font-family: 'Times New Roman', Times, serif;font-size:large;font-weight:bold; color: white; padding:0px; margin:0px">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">OnlineAssessment</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li><a th:href="@{/index}">Home</a></li>
+                   
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a th:href="@{/register}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a th:href="@{/login}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <div class="container" >
+        	<div class="registrationDiv">
+		        <form action="/register" th:action="@{/saveUser}" th:object="${user}"
+					method="POST">
+					
+					<div th:if="${error}" th:text="${error}" style="color: red;"></div> 
+					
+					<br>
+					
+					<label for="name">Name:</label>
+					<input type="text" th:field="*{userName}" required
+						placeholder="Enter the name" class="form-control mb-4 col-4">
+						
+						<br>
+						<label for="emailId" >EmailID:</label>
+						<input type="email" th:field="*{userEmailId}" required
+						placeholder="Enter emailId" class="form-control mb-4 col-4">
+						
+						<br>
+            			
+            			<label for="password" >Password:</label>
+						<input type="password" th:field="*{userPassword}"  pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,}" required
+						placeholder="Enter password" class="form-control mb-4 col-4">
+						
+						<br>
+						
+						<label for="role">Role:</label>
+		                <select id="role" name="role" required th:field="*{userRole}">
+		                    <option value="student">Student</option>
+		                    <option value="instructor">Instructor</option>
+		                </select><br><br>
+						
+						<center>
+						<button type="submit" class="btn btn-info col-2"> Register </button>
+					</center>
+						
+				</form>
+			</div>
+			
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+2024-02-19T10:44:44.624+05:30  INFO 12364 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : Starting ProjectPracticeApplication using Java 17.0.8.1 with PID 12364 (C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice\target\classes started by jpalla in C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice)
+2024-02-19T10:44:44.667+05:30  INFO 12364 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-02-19T10:44:45.244+05:30  INFO 12364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-19T10:44:45.248+05:30  INFO 12364 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-19T10:44:46.017+05:30  INFO 11944 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : Starting ProjectPracticeApplication using Java 17.0.8.1 with PID 11944 (C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice\target\classes started by jpalla in C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice)
+2024-02-19T10:44:46.048+05:30  INFO 11944 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-02-19T10:44:46.470+05:30  INFO 11944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-19T10:44:46.472+05:30  INFO 11944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-19T10:44:47.988+05:30  INFO 13868 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : Starting ProjectPracticeApplication using Java 17.0.8.1 with PID 13868 (C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice\target\classes started by jpalla in C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice)
+2024-02-19T10:44:47.995+05:30  INFO 13868 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-02-19T10:44:48.201+05:30  INFO 13868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-19T10:44:48.202+05:30  INFO 13868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-19T10:44:49.208+05:30  INFO 20288 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : Starting ProjectPracticeApplication using Java 17.0.8.1 with PID 20288 (C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice\target\classes started by jpalla in C:\Users\JPALLA\eclipse-workspace\sep23\projectPractice)
+2024-02-19T10:44:49.229+05:30  INFO 20288 --- [restartedMain] c.e.demo.ProjectPracticeApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-02-19T10:44:49.673+05:30  INFO 20288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-02-19T10:44:49.675+05:30  INFO 20288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-02-19T10:44:52.440+05:30  INFO 13868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-19T10:44:52.930+05:30  INFO 13868 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 439 ms. Found 6 JPA repository interfaces.
+2024-02-19T10:44:53.024+05:30  INFO 11944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-19T10:44:53.236+05:30  INFO 12364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-19T10:44:53.682+05:30  INFO 11944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 541 ms. Found 6 JPA repository interfaces.
+2024-02-19T10:44:53.889+05:30  INFO 12364 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 597 ms. Found 6 JPA repository interfaces.
+2024-02-19T10:44:55.506+05:30  INFO 20288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-19T10:44:56.305+05:30  INFO 20288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 688 ms. Found 6 JPA repository interfaces.
+2024-02-19T10:44:57.911+05:30  INFO 13868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-19T10:44:58.062+05:30  INFO 13868 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-19T10:44:58.064+05:30  INFO 13868 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-19T10:44:58.854+05:30  INFO 11944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-19T10:44:58.949+05:30  INFO 11944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-19T10:44:58.951+05:30  INFO 11944 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-19T10:44:59.097+05:30  INFO 13868 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-02-19T10:44:59.125+05:30  INFO 13868 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-19T10:44:59.126+05:30  INFO 13868 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10911 ms

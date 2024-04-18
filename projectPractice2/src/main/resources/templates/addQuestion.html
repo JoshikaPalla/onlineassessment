@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Add Question</title>
+<style>
+  label{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-size: large;
+  }
+  body{
+   background-color:rgb(206, 213, 233);
+   }
+   
+   *{
+   font-family: 'Times New Roman', Times, serif;
+   font-size:large;
+   }
+   
+   
+/*   form{ */
+/*         height:250px; */
+/*         width: 250px; */
+        
+/*     } */
+/*     .addSubjectDiv{ */
+/*         width:300px; */
+/*         height:250px; */
+/*         background-color:aliceblue ; */
+/*         display: flex; */
+/*         justify-content: center; */
+/*         align-items: center; */
+       
+/*     } */
+/*     .container{ */
+/*         background-color: floralwhite; */
+/*         height:530px; */
+/*         display: flex; */
+/*         justify-content: center; */
+/*         align-items: center; */
+/*     } */
+    
+    
+</style>
+
+</head>
+<body>
+	<div >
+        <header>
+           <nav class="navbar navbar-light " style="background-color:white;font-family: 'Times New Roman', Times, serif;font-size:large;font-weight:bold; color: white; padding:0px; margin:0px">
+              
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">OnlineAssessment</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li><a th:href="@{/viewQuestionBank}">QuestionBank</a></li>
+                    <li class="active"><a th:href="@{/addQuestion}">Add Question</a></li>
+                    
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li ><a th:href="@{/profile}"><span class="glyphicon glyphicon-user"></span> Profile </a></li>
+                    <li><a th:href="@{/loginOut}"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+                     <li ><a th:text="'Name:' + ${session.userName}"></a></li>
+                    
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <div class="container" >
+        	<div class="addSubjectDiv">
+		        <form action="/addQuestion" th:action="@{/addQuestionToList}" th:object="${question}"
+					method="POST">
+						<br>
+						<div th:if="${error}" th:text="${error}" style="color: red;"></div> 
+						<br>
+						
+						<input type="hidden" th:field="*{subjectId}" />
+						
+						<input type="hidden" th:field="*{instructorId}" />
+						
+						<label for="questionTitle" >Question Title:</label>
+            <br>
+						<input type="text" th:field="*{questionTitle}" required
+						placeholder="Enter question title" class="form-control mb-4 col-4">
+						<br>
+						
+						
+						<label for="option1" >Option1:</label>
+            <br>
+						<input type="text" th:field="*{option1}" required
+						placeholder="Enter option1" class="form-control mb-4 col-4">
+						<br>
+						
+						<label for="option2" >Option2:</label>
+            <br>
+						<input type="text" th:field="*{option2}" required
+						placeholder="Enter option2" class="form-control mb-4 col-4">
+						<br>
+						
+						<label for="option3" >Option3:</label>
+            <br>
+						<input type="text" th:field="*{option3}" required
+						placeholder="Enter option3" class="form-control mb-4 col-4">
+						<br>
+						
+						<label for="option1" >Option4:</label>
+            <br>
+						<input type="text" th:field="*{option4}" required
+						placeholder="Enter option4" class="form-control mb-4 col-4">
+						<br>
+						
+						<label for="correctAnswer" >CorrectAnswer:</label>
+            <br>
+						<input type="text" th:field="*{correctAnswer}" required
+						placeholder="Enter correct Answer"  class="form-control mb-4 col-4">
+						<br>
+						
+						<label for="difficultyLevel" >DifficultyLevel:</label>
+            <br>
+						<input type="text" th:field="*{difficultyLevel}" required
+						placeholder="Enter Difficulty Level"  class="form-control mb-4 col-4">
+						<br>
+						
+						<label for="marks" >Marks:</label>
+            <br>
+						<input type="text" th:field="*{marks}" required
+						placeholder="Enter Marks"  class="form-control mb-4 col-4">
+						<br>
+            <br>
+						<center>
+							<button type="submit" class="btn btn-info col-2"> Add Question </button>
+						</center>
+						
+				</form>
+			</div>
+        	
+        	 
+		</div>
+    
+	</div>
+</body>
+</html>

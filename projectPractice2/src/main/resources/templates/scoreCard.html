@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>student quizList</title>
+<style>
+
+h2{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+  
+}
+  
+.tableDiv{
+  display: flex;
+  justify-content: center;
+}
+
+th, td {
+ 
+  padding: 8px;
+ 
+  
+}
+
+a{
+ padding:4px;
+ margin:6px;
+ display: inline;
+}
+
+	body{
+ background-color:rgb(206, 213, 233);
+ }
+  *{
+   font-family: 'Times New Roman', Times, serif;
+   font-size:large;
+   }
+    
+</style>
+
+</head>
+<body>
+	<div >
+        <header>
+            <nav class="navbar navbar-light " style="background-color:white;font-family: 'Times New Roman', Times, serif;font-size:large;font-weight:bold; color: white; padding:0px; margin:0px">
+               
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">OnlineAssessment</a>
+                  </div>
+                 <ul class="nav navbar-nav">
+                    <li class="active"><a th:href="@{/studentQuizList}">Quiz</a></li>
+                    <li><a th:href="@{/performance}">Performace</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li ><a th:href="@{/profile}"><span class="glyphicon glyphicon-user"></span> Profile </a></li>
+                   	<li><a th:href="@{/submitQuiz}">Next</a>
+                     <li ><a th:text="'Name:' + ${session.userName}"><span class="glyphicon glyphicon-log-in"></span> </a></li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <div class="container" >
+        	
+        	<table>
+        	<thead>
+        	<tr>
+        	<td>Total Marks</td>
+        	<td>SecuredMarks</td>
+        	</thead>
+        	<tbody>
+        	<tr>
+        	<td th:text="${totalMarks}"></td>
+        	<td th:text="${securedMarks}">
+        	</td>
+        	</tr>
+        	</tbody>
+        
+        	</table>
+        	
+                
+		</div>
+	
+	</div>
+</body>
+</html>
